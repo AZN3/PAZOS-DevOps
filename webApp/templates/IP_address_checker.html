@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IP Address Checker</title>
+</head>
+<body>
+<h1>IP Address Checker</h1>
+<form action="{% url 'your_IP' %}" method="post">
+    {% csrf_token %}
+
+    <div>
+        <label>Enter an IP Address :</label>
+        <input type="text" name="Input Text" >
+    </div>
+
+    <div>
+    <button type="submit">Submit</button>
+  </div>
+
+</form>
+
+<button name="button"><a href="/"><< Home </a></button>
+
+
+</body>
+</html>

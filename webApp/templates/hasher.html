@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasher</title>
+</head>
+<body>
+    <h1>Hasher:</h1>
+
+<form action="{% url 'your_hash' %}" method="post">
+    {% csrf_token %}
+    <div>
+        <label>Enter a text to hash:</label>
+        <input type="text" name="Input Text" >
+    </div>
+    <p>Please select your Hashing method:</p>
+  <div>
+    <input type="radio" id="MD5"
+     name="hash" value="md5">
+    <label for="md5">MD5</label>
+
+    <input type="radio" id="SHA-256"
+     name="hash" value="sha-256">
+    <label for="SHA-256">SHA-256</label>
+
+
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+  <div>
+        <button name="button"><a href="/"><< Home </a></button>
+    </div>
+
+</body>
+</html>
